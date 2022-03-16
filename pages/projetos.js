@@ -69,14 +69,14 @@ const Projetos = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <Image
+            <ProjectImage
               src="/images/aprendendoCodando.png"
               alt="imagem do website do portfolio"
               width="100%"
               height="100%"
               target="_blank"
               rel="noreferrer"
-            ></Image>
+            ></ProjectImage>
           </a>
         </ProjectDiv>
       </Box>
