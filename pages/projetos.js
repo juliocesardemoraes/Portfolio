@@ -51,6 +51,7 @@ const Projetos = () => (
             href="https://aprendendo-codando.vercel.app/"
             scroll={false}
             target="_blank"
+            rel="noreferrer"
           >
             <Button
               mt={12}
@@ -66,6 +67,7 @@ const Projetos = () => (
             href="https://aprendendo-codando.vercel.app/"
             scroll={false}
             target="_blank"
+            rel="noreferrer"
           >
             <ProjectImage
               src="/images/aprendendoCodando.png"
@@ -73,6 +75,7 @@ const Projetos = () => (
               width="100%"
               height="100%"
               target="_blank"
+              rel="noreferrer"
             ></ProjectImage>
           </a>
         </ProjectDiv>
