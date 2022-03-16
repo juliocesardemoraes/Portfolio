@@ -71,7 +71,7 @@ const Projetos = () => (
             rel="noreferrer"
           >
             <ProjectImage
-              src="/images/aprendendoCodando.png"
+              src="/images/AprendendoCodando.png"
               alt="imagem do website do portfolio"
               width="100%"
               height="100%"
