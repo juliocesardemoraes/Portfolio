@@ -5,7 +5,8 @@ import Layout from "../components/layouts/article";
 import styled from "@emotion/styled";
 
 const ProjectImage = chakra(Img, {
-  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
+  shouldForwardProp: (prop) =>
+    ["width", "height", "src", "alt", "target"].includes(prop),
 });
 
 const ProjectDiv = styled.span`
@@ -74,8 +75,6 @@ const Projetos = () => (
               alt="imagem do website do portfolio"
               width="100%"
               height="100%"
-              target="_blank"
-              rel="noreferrer"
             ></ProjectImage>
           </a>
         </ProjectDiv>
