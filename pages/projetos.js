@@ -1,10 +1,10 @@
-import { Heading, Image, Button, Box, chakra } from "@chakra-ui/react";
-import Link from "next/link";
+import { Heading, Button, Box, chakra, Img } from "@chakra-ui/react";
+import { Link } from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import Layout from "../components/layouts/article";
 import styled from "@emotion/styled";
 
-const ProjectImage = chakra(Image, {
+const ProjectImage = chakra(Img, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
 
@@ -69,14 +69,14 @@ const Projetos = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <ProjectImage
+            <Image
               src="/images/aprendendoCodando.png"
-              alt="imagem do website"
+              alt="imagem do website do portfolio"
               width="100%"
               height="100%"
               target="_blank"
               rel="noreferrer"
-            ></ProjectImage>
+            ></Image>
           </a>
         </ProjectDiv>
       </Box>
