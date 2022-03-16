@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
-import { IoLogoGithub, IoBarChartSharp, IoCodeSlash } from "react-icons/io5";
+import { IoBarChartSharp, IoCodeSlash } from "react-icons/io5";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -92,19 +92,6 @@ const Navbar = (props) => {
           >
             <IoBarChartSharp />
             Experiência
-          </LinkItem>
-          <LinkItem
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/juliocesardemoraes/Portfolio"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            Código Fonte
           </LinkItem>
         </Stack>
 
