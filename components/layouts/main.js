@@ -2,7 +2,15 @@ import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
 import NavBar from "../navbar";
 import VoxelContainer from "../voxel-container";
-import NoSsr from "../no-ssr";
+
+const checkOtherRoutes = (router) => {
+  if (
+    router?.state?.pathname !== "/projetos" &&
+    router?.state?.pathname !== "/experiencia"
+  ) {
+    return true;
+  }
+};
 
 const Main = ({ children, router }) => {
   return (
@@ -13,7 +21,7 @@ const Main = ({ children, router }) => {
       </Head>
       <NavBar path={router.asPath} />
       <Container maxW="container.md" pt={14}>
-        {router?.state?.route !== "/projetos" && (
+        {checkOtherRoutes(router) && (
           <VoxelContainer model={"./novodev"}></VoxelContainer>
         )}
         {children}
