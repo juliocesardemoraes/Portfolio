@@ -16,7 +16,7 @@ const LogoBox = styled.span`
     transition: 200ms ease;
   }
   &:hover img {
-    transform: rotate(20deg);
+    transform: translateY(-5px) scale(0.65);
     opacity: 100% !important;
   }
 `;
