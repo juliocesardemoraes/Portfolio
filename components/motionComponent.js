@@ -12,7 +12,7 @@ const MotionComponent = ({ children }) => {
       x: 0,
       opacity: 1,
       transition: {
-        delay: 1,
+        delay: children?.props?.delay || 1,
       },
     });
   }
@@ -21,7 +21,7 @@ const MotionComponent = ({ children }) => {
     <Box ref={ref}>
       <motion.div
         initial={{
-          x: "100vw",
+          x: children?.props?.xValue || "100vw",
           opacity: "0%",
         }}
         animate={animationControl}
