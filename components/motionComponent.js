@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 
 const MotionComponent = ({ children }) => {
   const animationControl = useAnimation();
-  const { inView, entry, ref } = useInView({
+  const { inView, ref } = useInView({
     threshold: children?.props?.thresholdValue || 0,
   });
   if (inView) {
@@ -12,7 +12,7 @@ const MotionComponent = ({ children }) => {
       x: 0,
       opacity: 1,
       transition: {
-        delay: children?.props?.delay || 1,
+        delay: children?.props?.delay || 0.25,
       },
     });
   }

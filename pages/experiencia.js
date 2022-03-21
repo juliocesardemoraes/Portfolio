@@ -41,13 +41,6 @@ const Projetos = () => (
               Website e-learning
             </Heading>
           </Box>
-          {/* <ProjectImage
-            src="/images/isometricModel.png"
-            alt="logo do e-learning"
-            borderRadius="1em"
-            width="100px"
-            height="100px"
-          ></ProjectImage>*/}
           <a
             href="https://aprendendo-codando.vercel.app/"
             scroll={false}

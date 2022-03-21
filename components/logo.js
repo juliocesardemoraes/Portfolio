@@ -12,17 +12,18 @@ const LogoBox = styled.span`
   line-height: 20px;
   padding: 10px;
   img {
+    transform: scale(0.9);
     opacity: 70%;
     transition: 200ms ease;
   }
   &:hover img {
-    transform: translateY(-5px) scale(0.65);
+    transform: translateY(1px) scale(0.9);
     opacity: 100% !important;
   }
 `;
 
 const Logo = () => {
-  const footPrintImg = `/images/isometricModel${useColorModeValue(
+  const isometricImage = `/images/isometricModel${useColorModeValue(
     "",
     "-dark"
   )}.png`;
@@ -31,7 +32,13 @@ const Logo = () => {
     <Link href="/" scroll={false}>
       <a>
         <LogoBox>
-          <Image src={footPrintImg} mr={4} width={30} height={30} alt="logo" />
+          <Image
+            src={isometricImage}
+            mr={4}
+            width={30}
+            height={30}
+            alt="logo"
+          />
           <Text
             mt={2.5}
             ml={2}

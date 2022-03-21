@@ -18,18 +18,18 @@ const ProjectDiv = styled.span`
 const Projects = () => {
   return (
     <>
-      <Box textAlign={"center"}>
+      <Box textAlign={"center"} marginTop={"2em"}>
         <Heading as="h2" variant="page-title">
           Projetos
         </Heading>
       </Box>
-      <Box background={"#fff"} borderRadius={"1em"} mt={"1em"}>
+      <Box background={"#fff"} borderRadius={"1em"} mt={"1em"} padding={"4em"}>
         <Box display={"flex"} flexDirection={"row"}>
           <Box
             display={"flex"}
             flexDirection={"column"}
-            padding={4}
             justifyContent={"space-around"}
+            p={2}
           >
             <Box>
               <Heading as="h1" color={"#7456F0"}>
@@ -40,6 +40,7 @@ const Projects = () => {
                 fontSize="18px"
                 fontWeight={300}
                 color={"#4E32BF"}
+                marginBottom={"2em"}
               >
                 Website de aprendizado
               </Heading>
@@ -58,9 +59,10 @@ const Projects = () => {
               rel="noreferrer"
             >
               <Button
-                mt={12}
                 colorScheme={"facebook"}
                 href="https://aprendendo-codando.vercel.app/"
+                width={"100%"}
+                height={"2.5rem"}
               >
                 Me mostre mais
               </Button>
