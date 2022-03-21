@@ -43,10 +43,10 @@ const Navbar = (props) => {
     <Box
       position="fixed"
       as="nav"
-      w="100%"
+      w="95vw"
       bg={useColorModeValue("#ffffff40", "#20202380")}
       css={{ backdropFilter: "blur(10px)" }}
-      zIndex={1}
+      zIndex={10}
       {...props}
     >
       <Container
@@ -107,15 +107,6 @@ const Navbar = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>Sobre</MenuItem>
-                </NextLink>
-                <NextLink href="/projetos" passHref>
-                  <MenuItem as={Link}>Projetos</MenuItem>
-                </NextLink>
-                <NextLink href="/experiencia" passHref>
-                  <MenuItem as={Link}>Experiencia</MenuItem>
-                </NextLink>
                 <MenuItem
                   as={Link}
                   href="https://github.com/juliocesardemoraes/Portfolio"
