@@ -123,7 +123,9 @@ const THREEDContainer = (props) => {
 
   return (
     <CodeContainer ref={refContainer}>
-      {loading && <CodeSpinner value={props?.resizeValue} />}
+      {loading && (
+        <CodeSpinner valueToResizeCanvas={props?.valueToResizeCanvas} />
+      )}
     </CodeContainer>
   );
 };
