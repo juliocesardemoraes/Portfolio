@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
 import NavBar from "../navbar";
+import Footer from "../footer";
 
 const Main = ({ children, router }) => {
   return (
@@ -10,9 +11,10 @@ const Main = ({ children, router }) => {
         <title>Júlio César - Pagína principal</title>
       </Head>
       <NavBar path={router.asPath} />
-      <Container maxW="container.md" pt={14}>
+      <Container maxW="container.md" pt={14} path={router.asPath}>
         {children}
       </Container>
+      <Footer path={router.asPath}></Footer>
     </Box>
   );
 };
