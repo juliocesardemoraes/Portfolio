@@ -1,6 +1,4 @@
 import { Heading, Button, Box, chakra, Img } from "@chakra-ui/react";
-import { Link } from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
 import Layout from "../components/layouts/article";
 import styled from "@emotion/styled";
 

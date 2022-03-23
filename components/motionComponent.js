@@ -15,6 +15,14 @@ const MotionComponent = ({ children }) => {
         delay: children?.props?.delay || 0.25,
       },
     });
+  } else {
+    animationControl.start({
+      x: -0,
+      opacity: 0,
+      transition: {
+        delay: children?.props?.delay || 0.25,
+      },
+    });
   }
 
   return (
