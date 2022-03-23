@@ -45,16 +45,9 @@ const Projects = () => {
                 Website de aprendizado
               </Heading>
             </Box>
-            {/* <ProjectImage
-            src="/images/isometricModel.png"
-            alt="logo do e-learning"
-            borderRadius="1em"
-            width="100px"
-            height="100px"
-          ></ProjectImage>*/}
             <a
               href="https://aprendendo-codando.vercel.app/"
-              scroll={false}
+              scroll={"false"}
               target="_blank"
               rel="noreferrer"
             >
@@ -71,7 +64,7 @@ const Projects = () => {
           <ProjectDiv ml={4}>
             <a
               href="https://aprendendo-codando.vercel.app/"
-              scroll={false}
+              scroll={"false"}
               target="_blank"
               rel="noreferrer"
             >
