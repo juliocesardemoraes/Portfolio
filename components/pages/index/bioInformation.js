@@ -66,7 +66,7 @@ const BioInformation = () => {
         <Box>
           <Text variant="page-title" textAlign={"justify"} padding={"2em"}>
             Tenho 25 anos, e sou formado em sistemas de informação pela
-            faculdade UEMG PASSOS. Abaixo estão as tecnologias que eu utilizo
+            faculdade UEMG PASSOS. Abaixo estão as tecnologias que mais utilizo
             para desenvolver aplicações.
           </Text>
         </Box>
