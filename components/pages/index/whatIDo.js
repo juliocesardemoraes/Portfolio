@@ -7,6 +7,7 @@ import {
   chakra,
   Image,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
@@ -33,6 +34,8 @@ const MotionBoxChildren = (props) => {
 };
 
 const WhatIDo = () => {
+  const { t } = useTranslation();
+
   return (
     <Box
       bg={useColorModeValue("#ffffff40", "#22222A")}
@@ -68,11 +71,8 @@ const WhatIDo = () => {
             </Box>
           </motion.div>
           <Box>
-            <Heading fontSize={"20px"}>Desenvolvimento</Heading>
-            <Text fontWeight={"300"}>
-              Javascript HTML/CSS, React.js, Next.js, Node.js, Vue.js,
-              Desenvolvimento de sites responsivos, Websocket, Python, C++.
-            </Text>
+            <Heading fontSize={"20px"}>{t("index:bio_development")}</Heading>
+            <Text fontWeight={"300"}>{t("index:bio_development_content")}</Text>
           </Box>
         </Box>
         <Box>
@@ -94,10 +94,8 @@ const WhatIDo = () => {
             </Box>
           </motion.div>
           <Box>
-            <Heading fontSize={"20px"}>Animações</Heading>
-            <Text fontWeight={"300"}>
-              Animações em 2D e 3D. Utilizando Three.js, Framer e CSS.
-            </Text>
+            <Heading fontSize={"20px"}>{t("index:bio_animation")}</Heading>
+            <Text fontWeight={"300"}>{t("index:bio_animation_content")}</Text>
           </Box>
         </Box>
         <Box>
@@ -142,11 +140,9 @@ const WhatIDo = () => {
             </Box>
           </motion.div>
           <Box>
-            <Heading fontSize={"20px"}>UX/UI</Heading>
+            <Heading fontSize={"20px"}>{t("index:bio_userexperience")}</Heading>
             <Text fontWeight={"300"}>
-              Desenvolvimento com foco na experiencia do usuário e na interface
-              do programa. Prototipação. Design para mobile, criação de
-              aplicações responsivas.
+              {t("index:bio_userexperience_content")}
             </Text>
           </Box>
         </Box>
@@ -230,9 +226,9 @@ const WhatIDo = () => {
             </Box>
           </motion.div>
           <Box>
-            <Heading fontSize={"20px"}>Ilustrações/Modelagem</Heading>
+            <Heading fontSize={"20px"}>{t("index:bio_illustration")}</Heading>
             <Text fontWeight={"300"}>
-              Design de componentes, modelagem em 3d. Criação de ícones.
+              {t("index:bio_illustration_content")}
             </Text>
           </Box>
         </Box>

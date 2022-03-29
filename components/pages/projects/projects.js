@@ -1,6 +1,6 @@
 import { Heading, Button, Box, chakra, Img } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-
+import { useTranslation } from "react-i18next";
 const ProjectImage = chakra(Img, {
   shouldForwardProp: (prop) =>
     ["width", "height", "src", "alt", "target"].includes(prop),
@@ -16,11 +16,13 @@ const ProjectDiv = styled.span`
 `;
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Box textAlign={"center"} marginTop={"2em"}>
         <Heading as="h2" variant="page-title">
-          Projetos
+          {t("navbar:projects")}
         </Heading>
       </Box>
       <Box background={"#fff"} borderRadius={"1em"} mt={"1em"} padding={"4em"}>
@@ -42,7 +44,7 @@ const Projects = () => {
                 color={"#4E32BF"}
                 marginBottom={"2em"}
               >
-                Website de aprendizado
+                {t("projects:website_aprendendo_content")}
               </Heading>
             </Box>
             <a
@@ -57,7 +59,7 @@ const Projects = () => {
                 width={"100%"}
                 height={"2.5rem"}
               >
-                Me mostre mais
+                {t("common:show_more")}
               </Button>
             </a>
           </Box>
