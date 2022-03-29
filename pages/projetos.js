@@ -1,13 +1,8 @@
-import { chakra, Img } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import THREEDContainer from "../components/container-3d";
 import Projects from "../components/pages/projects/projects";
 import MotionComponent from "../components/motionComponent";
-
-const ProjectImage = chakra(Img, {
-  shouldForwardProp: (prop) =>
-    ["width", "height", "src", "alt", "target"].includes(prop),
-});
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Projetos = () => (
   <Layout title="Projetos">
@@ -25,5 +20,19 @@ const Projetos = () => (
     </MotionComponent>
   </Layout>
 );
+
+// export default function Home...
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "projects",
+        "navbar",
+      ])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 export default Projetos;

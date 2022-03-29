@@ -7,8 +7,9 @@ import React from "react";
 import HeroBiography from "../components/pages/index/heroBio";
 import WhatIDo from "../components/pages/index/whatIDo";
 import ProgressCircle from "../components/progressCircle";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-const Page = (props) => {
+const Page = () => {
   return (
     <Layout title="Página Principal">
       <ProgressCircle></ProgressCircle>
@@ -40,5 +41,14 @@ const Page = (props) => {
     </Layout>
   );
 };
+// export default function Home...
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "index", "navbar"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 export default Page;
