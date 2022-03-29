@@ -6,9 +6,11 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 const HeroBiography = (props) => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   const handleClick = (route) => {
     if (route === "/projetos") router.push(route);
@@ -17,11 +19,10 @@ const HeroBiography = (props) => {
   return (
     <Box>
       <Text textAlign={"left"} fontWeight={300}>
-        Ola meu nome é Júlio César, sou um desenvolvedor fullstack e designer
-        focado na experiência de usuário.
+        {t("index:bio_introducing")}
       </Text>
       <Heading mt={4} fontWeight={500}>
-        Eu te ajudarei a criar experiências imersivas.
+        {t("index:i_will_help_you")}
       </Heading>
       <Box mt={12}>
         <Button
@@ -30,7 +31,7 @@ const HeroBiography = (props) => {
             handleClick("/projetos");
           }}
         >
-          Veja meus projetos
+          {t("index:see_projects")}
         </Button>
 
         <Button
@@ -44,7 +45,7 @@ const HeroBiography = (props) => {
             handleClick();
           }}
         >
-          Contato
+          {t("common:contact")}
         </Button>
       </Box>
     </Box>

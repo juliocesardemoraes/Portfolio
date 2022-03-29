@@ -9,12 +9,15 @@ import {
   Image,
 } from "@chakra-ui/react";
 import THREEDContainer from "../../container-3d";
+import { useTranslation } from "react-i18next";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
 
 const BioInformation = () => {
+  const { t } = useTranslation();
+
   return (
     <Box
       bg={useColorModeValue("#ffffff40", "#22222A")}
@@ -39,7 +42,7 @@ const BioInformation = () => {
             Júlio César
           </Heading>
           <Text color={useColorModeValue("rgb(80, 31, 187)", "#9F78FB")}>
-            Desenvolvedor/ UX Designer
+            {t("index:bio_profession")}
           </Text>
         </Box>
         <Box flexShrink={0} mt={{ base: 4, md: 4 }} textAlign="center">
@@ -64,18 +67,16 @@ const BioInformation = () => {
       </Box>
       <Container>
         <Box>
-          <Text variant="page-title" textAlign={"justify"} padding={"2em"}>
-            Tenho 25 anos, e sou formado em sistemas de informação pela
-            faculdade UEMG PASSOS. Abaixo estão as tecnologias que mais utilizo
-            para desenvolver aplicações.
+          <Text variant="page-title" textAlign={"center"} padding={"2em"}>
+            {t("index:bio_professional_background")}
           </Text>
         </Box>
         <Box>
           <Heading fontSize={"16px !important"}>
             <Heading color={"#84CA7E"} fontSize={"16px !important"} as="span">
-              Tecnologias
+              {t("index:bio_tech")}
             </Heading>{" "}
-            que mais utilizo.
+            {t("index:bio_tech_following")}
           </Heading>
           <SimpleGrid columns={[2, 2, 4]} spacing={5}>
             <THREEDContainer
