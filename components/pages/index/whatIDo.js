@@ -4,19 +4,15 @@ import {
   SimpleGrid,
   Text,
   useColorModeValue,
-  chakra,
   Image,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
-});
 
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Image);
 
+// Custom framer motion component that supports image
 const MotionBoxChildren = (props) => {
   return (
     <MotionBox
