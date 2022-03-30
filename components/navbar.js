@@ -20,8 +20,9 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
 import { IoBarChartSharp, IoCodeSlash } from "react-icons/io5";
 import { useRouter } from "next/router";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import React, { useEffect, useState } from "react";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -70,6 +71,24 @@ const Navbar = (props) => {
   const { path } = props;
   const router = useRouter();
   const { t } = useTranslation();
+  const [scrollTop, setScrollTop] = useState(0);
+  const animationControl = useAnimation();
+
+  const onScroll = () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    const scrolled = (winScroll / height) * 100;
+    setScrollTop(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const SelectLanguage = () => {
     const language = router.locale;
@@ -99,20 +118,37 @@ const Navbar = (props) => {
       </AnimatePresence>
     );
   };
+  if (scrollTop < 5) {
+    animationControl.start({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.25,
+      },
+    });
+  } else {
+    animationControl.start({
+      x: -0,
+      opacity: 0,
+      transition: {
+        delay: 0.25,
+      },
+    });
+  }
 
   return (
     <AnimatePresence exitBeforeEnter initial={true}>
       <motion.div
         key={useColorModeValue("light", "dark")}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.2 }}
+        animate={animationControl}
       >
         <Container
           display="flex"
+          mt={2}
           p={2}
           maxW="container.md"
+          maxH="56px"
           wrap="wrap"
           align="center"
           justify="space-between"

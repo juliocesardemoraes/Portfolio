@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 
 const ProgressCircle = () => {
   const [scrollTop, setScrollTop] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const onScroll = () => {
     const winScroll = document.documentElement.scrollTop;
@@ -12,7 +13,9 @@ const ProgressCircle = () => {
       document.documentElement.clientHeight;
 
     const scrolled = (winScroll / height) * 100;
-    setScrollTop(scrolled);
+
+    setScrollTop(winScroll);
+    setScrollProgress(scrolled);
   };
 
   useEffect(() => {
@@ -27,7 +30,7 @@ const ProgressCircle = () => {
         style={{
           width: "3rem",
           height: "3rem",
-          border: `${0.2 + scrollTop / 250}rem solid ${useColorModeValue(
+          border: `${0.2 + scrollProgress / 250}rem solid ${useColorModeValue(
             "#F6AD55",
             "#6B46C1"
           )}`,
@@ -40,10 +43,10 @@ const ProgressCircle = () => {
           justifyContent: "center",
         }}
         animate={{
-          top: `${scrollTop * 1.7}vh`,
+          top: `${scrollTop}px`,
         }}
       >
-        <Heading fontSize={12}>{Math.round(scrollTop) + "%"}</Heading>
+        <Heading fontSize={12}>{Math.round(scrollProgress) + "%"}</Heading>
       </motion.div>
     </Box>
   );

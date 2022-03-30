@@ -23,10 +23,7 @@ const LogoBox = styled.span`
 `;
 
 const Logo = () => {
-  const isometricImage = `/images/isometricModel${useColorModeValue(
-    "",
-    "-dark"
-  )}.png`;
+  const isometricImage = `/images/NewLogo.svg`;
 
   return (
     <Link href="/" scroll={false}>
