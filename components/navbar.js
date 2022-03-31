@@ -17,7 +17,7 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import ThemeToggleButton from "./theme-toggle-button";
+import ThemeToggleButton from "./themeToggleButton";
 import { IoBarChartSharp, IoCodeSlash } from "react-icons/io5";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
@@ -61,9 +61,9 @@ const renderFlag = (language) => {
     );
   };
   if (language === "en") {
-    return <Flag flagName={"brasilFlag"}></Flag>;
+    return <Flag flagName={"BrasilFlag"}></Flag>;
   } else {
-    return <Flag flagName={"unitedStatesFlag"}></Flag>;
+    return <Flag flagName={"UnitedStatesFlag"}></Flag>;
   }
 };
 

@@ -56,7 +56,7 @@ const BioInformation = () => {
             overflow="hidden"
           >
             <ProfileImage
-              src="/images/juliocesar.png"
+              src="/images/JulioCesar.png"
               alt="imagem de perfil"
               borderRadius="full"
               width="100%"
