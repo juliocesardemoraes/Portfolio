@@ -6,6 +6,7 @@ import { Box, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import HeroBiography from "../components/pages/index/heroBio";
 import WhatIDo from "../components/pages/index/whatIDo";
+import Footer from "../components/pages/index/footer";
 import ProgressCircle from "../components/progressCircle";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -36,6 +37,9 @@ const Page = () => {
         </MotionComponent>
         <MotionComponent>
           <WhatIDo></WhatIDo>
+        </MotionComponent>
+        <MotionComponent>
+          <Footer></Footer>
         </MotionComponent>
       </Box>
     </Layout>

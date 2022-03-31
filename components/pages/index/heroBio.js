@@ -33,20 +33,18 @@ const HeroBiography = () => {
         >
           {t("index:see_projects")}
         </Button>
-
-        <Button
-          m={2}
-          fontWeight={500}
-          border={`0.2rem solid ${useColorModeValue("#F6AD55", "#9F78FB")}`}
-          background={"none"}
-          opacity={0.85}
-          _hover={{ opacity: "1" }}
-          onClick={() => {
-            handleClick();
-          }}
-        >
-          {t("common:contact")}
-        </Button>
+        <a href="#contact">
+          <Button
+            m={2}
+            fontWeight={500}
+            border={`0.2rem solid ${useColorModeValue("#F6AD55", "#9F78FB")}`}
+            background={"none"}
+            opacity={0.85}
+            _hover={{ opacity: "1" }}
+          >
+            {t("common:contact")}
+          </Button>
+        </a>
       </Box>
     </Box>
   );
