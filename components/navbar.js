@@ -18,7 +18,6 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./themeToggleButton";
-import { IoBarChartSharp, IoCodeSlash } from "react-icons/io5";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -176,7 +175,6 @@ const Navbar = (props) => {
               style={{ gap: 4 }}
               pl={2}
             >
-              <IoCodeSlash />
               {t("navbar:projects")}
             </LinkItem>
 
@@ -188,7 +186,6 @@ const Navbar = (props) => {
               flexDirection="row"
               pl={2}
             >
-              <IoBarChartSharp />
               {t("navbar:experience")}
             </LinkItem>
           </Stack>

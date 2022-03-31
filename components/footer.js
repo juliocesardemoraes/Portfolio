@@ -1,6 +1,5 @@
 import NextLink from "next/link";
 import { Box, Link, Stack, useColorModeValue } from "@chakra-ui/react";
-import { IoBarChartSharp, IoCodeSlash } from "react-icons/io5";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -49,7 +48,6 @@ const Footer = (props) => {
           style={{ gap: 4 }}
           pl={2}
         >
-          <IoCodeSlash />
           Projetos
         </LinkItem>
         <LinkItem
@@ -60,7 +58,6 @@ const Footer = (props) => {
           style={{ gap: 4 }}
           pl={2}
         >
-          <IoBarChartSharp />
           Experiência
         </LinkItem>
       </Stack>

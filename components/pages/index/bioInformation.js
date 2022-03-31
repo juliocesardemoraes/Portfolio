@@ -72,7 +72,11 @@ const BioInformation = () => {
           </Text>
         </Box>
         <Box>
-          <Heading fontSize={"16px !important"}>
+          <Heading
+            fontSize={"16px !important"}
+            textAlign={"center"}
+            marginTop={"2em"}
+          >
             <Heading color={"#84CA7E"} fontSize={"16px !important"} as="span">
               {t("index:bio_tech")}
             </Heading>{" "}

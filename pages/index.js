@@ -18,7 +18,7 @@ const Page = () => {
           <SimpleGrid
             columns={[1, 2, 2]}
             spacing={5}
-            marginTop={"4em"}
+            marginTop={"1em"}
             padding={"2em"}
           >
             <HeroBiography></HeroBiography>
