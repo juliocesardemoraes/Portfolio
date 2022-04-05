@@ -24,7 +24,7 @@ const Page = () => {
           >
             <HeroBiography></HeroBiography>
             <THREEDContainer
-              model={"./novodev"}
+              model={"./robotdev2"}
               resizeValue={1}
               thresholdValue={0}
               xValue={"-100vw"}
