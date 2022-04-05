@@ -4,6 +4,8 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../lib/model";
 import { CodeContainer, CodeSpinner } from "./container-loader";
 
+let mouse = new THREE.Vector2();
+
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 }
@@ -32,6 +34,13 @@ const THREEDContainer = (props) => {
       renderer.setSize(scW, scH);
     }
   }, [renderer]);
+
+  const onDocumentMouseMove = (event) => {
+    let raycaster = new THREE.Raycaster();
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    if (_camera) raycaster.setFromCamera(mouse.clone(), _camera);
+  };
 
   /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
@@ -66,8 +75,18 @@ const THREEDContainer = (props) => {
       const upColor = 0xffff80;
       const downColor = 0x4040ff;
 
-      const ambientLight = new THREE.HemisphereLight(upColor, downColor, 0.9);
+      const ambientLight = new THREE.HemisphereLight(upColor, downColor, 0.4);
       scene.add(ambientLight);
+
+      const light = new THREE.PointLight(0xffffff, 3, 100);
+      light.position.set(50, 30, 50);
+
+      scene.add(light);
+
+      const lightNatural = new THREE.PointLight(0xffffff, 1, 100);
+      light.position.set(50, 30, 50);
+
+      scene.add(lightNatural);
 
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
@@ -75,8 +94,8 @@ const THREEDContainer = (props) => {
       setControls(controls);
 
       loadGLTFModel(scene, `./${props?.model}.glb`, {
-        receiveShadow: false,
-        castShadow: false,
+        receiveShadow: true,
+        castShadow: true,
       }).then(() => {
         animate();
         setLoading(false);
@@ -103,6 +122,16 @@ const THREEDContainer = (props) => {
           controls.update();
         }
 
+        // AUTOMATIC ROTATION
+        const time = Date.now() * 0.0005;
+        lightNatural.position.x = Math.sin(time * 0.7) * 30;
+        lightNatural.position.y = Math.cos(time * 0.5) * 40;
+        lightNatural.position.z = Math.cos(time * 0.3) * 30;
+
+        // LIGHT ROTATION BASED ON MOUSE
+        light.position.x = mouse.x * 100;
+        light.position.y = mouse.y * 100;
+
         renderer.render(scene, camera);
       };
 
@@ -116,8 +145,11 @@ const THREEDContainer = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize, false);
+    window.addEventListener("mousemove", onDocumentMouseMove, false);
+
     return () => {
       window.removeEventListener("resize", handleWindowResize, false);
+      window.removeEventListener("mousemove", onDocumentMouseMove, false);
     };
   }, [renderer, handleWindowResize]);
 
