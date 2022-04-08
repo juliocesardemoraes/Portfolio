@@ -71,7 +71,6 @@ const Navbar = (props) => {
   const router = useRouter();
   const { t } = useTranslation();
   const [scrollTop, setScrollTop] = useState(0);
-  const animationControl = useAnimation();
 
   const onScroll = () => {
     const winScroll = document.documentElement.scrollTop;
@@ -117,30 +116,12 @@ const Navbar = (props) => {
       </AnimatePresence>
     );
   };
-  if (scrollTop < 5) {
-    animationControl.start({
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.25,
-      },
-    });
-  } else {
-    animationControl.start({
-      x: -0,
-      opacity: 0,
-      transition: {
-        delay: 0.25,
-      },
-    });
-  }
 
   return (
     <AnimatePresence exitBeforeEnter initial={true}>
       <motion.div
         key={useColorModeValue("light", "dark")}
         transition={{ duration: 0.2 }}
-        animate={animationControl}
       >
         <Container
           display="flex"
