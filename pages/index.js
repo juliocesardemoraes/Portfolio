@@ -6,7 +6,7 @@ import { Box, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import HeroBiography from "../components/pages/index/heroBio";
 import WhatIDo from "../components/pages/index/whatIDo";
-import Footer from "../components/pages/index/footer";
+import Contact from "../components/pages/index/contact";
 import ProgressCircle from "../components/progressCircle";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -39,7 +39,7 @@ const Page = () => {
           <WhatIDo></WhatIDo>
         </MotionComponent>
         <MotionComponent>
-          <Footer></Footer>
+          <Contact></Contact>
         </MotionComponent>
       </Box>
     </Layout>
@@ -49,7 +49,12 @@ const Page = () => {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "index", "navbar"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "projects",
+        "index",
+        "navbar",
+      ])),
       // Will be passed to the page component as props
     },
   };

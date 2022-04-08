@@ -9,15 +9,6 @@ const Projetos = () => (
     <MotionComponent>
       <Projects></Projects>
     </MotionComponent>
-    <MotionComponent>
-      <THREEDContainer
-        resizeValue={4}
-        valueToResizeCanvas={2}
-        model={"./dev"}
-        thresholdValue={0}
-        delay={1.5}
-      ></THREEDContainer>
-    </MotionComponent>
   </Layout>
 );
 
@@ -28,6 +19,7 @@ export async function getStaticProps({ locale }) {
       ...(await serverSideTranslations(locale, [
         "common",
         "projects",
+        "index",
         "navbar",
       ])),
       // Will be passed to the page component as props
