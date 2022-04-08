@@ -1,6 +1,7 @@
-import { Heading, Button, Box, chakra, Img } from "@chakra-ui/react";
+import { Heading, Box, chakra, Img, useColorModeValue } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
+import ProjectComponent from "./projectComponent";
 const ProjectImage = chakra(Img, {
   shouldForwardProp: (prop) =>
     ["width", "height", "src", "alt", "target"].includes(prop),
@@ -20,66 +21,10 @@ const Projects = () => {
 
   return (
     <>
-      <Box textAlign={"center"} marginTop={"2em"}>
-        <Heading as="h2" variant="page-title">
-          {t("navbar:projects")}
-        </Heading>
-      </Box>
-      <Box background={"#fff"} borderRadius={"1em"} mt={"1em"} padding={"4em"}>
-        <Box display={"flex"} flexDirection={"row"}>
-          <Box
-            display={"flex"}
-            flexDirection={"column"}
-            justifyContent={"space-around"}
-            p={2}
-          >
-            <Box>
-              <Heading as="h1" color={"#7456F0"}>
-                Aprendendo Codando
-              </Heading>
-              <Heading
-                as="h3"
-                fontSize="18px"
-                fontWeight={300}
-                color={"#4E32BF"}
-                marginBottom={"2em"}
-              >
-                {t("projects:website_aprendendo_content")}
-              </Heading>
-            </Box>
-            <a
-              href="https://aprendendo-codando.vercel.app/"
-              scroll={"false"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button
-                colorScheme={"facebook"}
-                href="https://aprendendo-codando.vercel.app/"
-                width={"100%"}
-                height={"2.5rem"}
-              >
-                {t("common:show_more")}
-              </Button>
-            </a>
-          </Box>
-          <ProjectDiv ml={4}>
-            <a
-              href="https://aprendendo-codando.vercel.app/"
-              scroll={"false"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ProjectImage
-                src="/images/AprendendoCodando.png"
-                alt="imagem do website do portfolio"
-                width="100%"
-                height="100%"
-              ></ProjectImage>
-            </a>
-          </ProjectDiv>
-        </Box>
-      </Box>
+      <Heading textAlign={"center"} mb={"1.3em"}>
+        {t("navbar:projects")}
+      </Heading>
+      <ProjectComponent></ProjectComponent>
     </>
   );
 };
