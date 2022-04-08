@@ -3,53 +3,17 @@ import {
   useColorModeValue,
   Heading,
   Image,
-  chakra,
   Text,
   Divider,
   OrderedList,
   ListItem,
 } from "@chakra-ui/react";
-import { FaWrench, FaCodepen, FaTasks } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import ProjectNav from "../common/projectNav";
+import ProjectProcessBoxes from "../common/projectProcessBoxes";
 
 const AprendendoCodando = (props) => {
   const { t } = useTranslation();
-  const renderProcessBoxes = (value) => {
-    return (
-      <Box
-        display={"flex"}
-        flexDir={"column"}
-        justifyContent={"center"}
-        alignItems={"center"}
-        width={"100px"}
-      >
-        <Box
-          w={"50px"}
-          h={"50px"}
-          bg={useColorModeValue("#EEEEEE", "#36363D")}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          borderRadius={"50%"}
-        >
-          <Image
-            width={25}
-            height={25}
-            alt="estrutura"
-            as={
-              value == "research"
-                ? FaWrench
-                : value === "prototype"
-                ? FaCodepen
-                : FaTasks
-            }
-          />
-        </Box>
-        <Text>{t(`projects:${value}`)}</Text>
-      </Box>
-    );
-  };
 
   return (
     <>
@@ -88,9 +52,9 @@ const AprendendoCodando = (props) => {
               justifyContent={"space-between"}
               m={"2em 1em 1em 1em"}
             >
-              {renderProcessBoxes("research")}
-              {renderProcessBoxes("prototype")}
-              {renderProcessBoxes("validation")}
+              <ProjectProcessBoxes value={"research"}></ProjectProcessBoxes>
+              <ProjectProcessBoxes value={"prototype"}></ProjectProcessBoxes>
+              <ProjectProcessBoxes value={"validation"}></ProjectProcessBoxes>
             </Box>
             <Box mt={"2em"}>
               <Heading
