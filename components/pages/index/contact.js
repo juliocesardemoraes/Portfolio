@@ -2,7 +2,7 @@ import { Box, Heading, useColorModeValue, IconButton } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGoogle, FaGithub } from "react-icons/fa";
 
-const Footer = () => {
+const Contact = () => {
   const { t } = useTranslation();
 
   return (
@@ -68,4 +68,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Contact;
