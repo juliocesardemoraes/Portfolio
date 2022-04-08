@@ -3,12 +3,14 @@ import THREEDContainer from "../components/container-3d";
 import Projects from "../components/pages/projects/projects";
 import MotionComponent from "../components/motionComponent";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Contact from "../components/pages/index/contact";
 
 const Projetos = () => (
   <Layout title="Projetos">
     <MotionComponent>
       <Projects></Projects>
     </MotionComponent>
+    <Contact></Contact>
   </Layout>
 );
 

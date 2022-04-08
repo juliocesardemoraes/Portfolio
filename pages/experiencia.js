@@ -3,7 +3,7 @@ import Layout from "../components/layouts/article";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 import THREEDContainer from "../components/container-3d";
-
+import Contact from "../components/pages/index/contact";
 const Experiencia = () => {
   const { t } = useTranslation();
   return (
@@ -41,6 +41,7 @@ const Experiencia = () => {
           </Box>
         </SimpleGrid>
       </Box>
+      <Contact></Contact>
     </Layout>
   );
 };
