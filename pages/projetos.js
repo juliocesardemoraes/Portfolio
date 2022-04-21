@@ -1,5 +1,4 @@
 import Layout from "../components/layouts/article";
-import THREEDContainer from "../components/container-3d";
 import Projects from "../components/pages/projects/projects";
 import MotionComponent from "../components/motionComponent";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
