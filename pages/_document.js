@@ -13,11 +13,14 @@ export default class Document extends NextDocument {
             content="initial-scale=1.0, width=device-width"
           />
           <meta property="og:title" content="Portfolio Main Page" />
-          <meta property="og:image" content={imageScreenshot} />
+          <meta
+            property="og:image"
+            content="https://portfolio-red-eta.vercel.app/images/PortfolioScreenshot.png"
+          />
           <meta property="og:description" content="Portfolio land page" />
           <meta
             property="og:url"
-            content="https://portfolio-red-eta.vercel.app/images/PortfolioScreenshot.png"
+            content="https://portfolio-red-eta.vercel.app"
           />
         </Head>
         <body>
