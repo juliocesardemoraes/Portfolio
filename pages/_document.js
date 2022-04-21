@@ -7,11 +7,36 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html>
-        <Head prefix="">
+        <Head>
+          <meta name="description" content="Portfolio land page" />
+
+          <meta itemprop="name" content="Portfolio Main Page" />
+          <meta itemprop="description" content="Portfolio land page" />
           <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
+            itemprop="image"
+            content="http://portfolio-red-eta.vercel.app/images/PortfolioScreenshot.png"
           />
+
+          <meta
+            property="og:url"
+            content="https://portfolio-red-eta.vercel.app"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Portfolio Main Page" />
+          <meta property="og:description" content="Portfolio land page" />
+          <meta
+            property="og:image"
+            content="http://portfolio-red-eta.vercel.app/images/PortfolioScreenshot.png"
+          />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Portfolio Main Page" />
+          <meta name="twitter:description" content="Portfolio land page" />
+          <meta
+            name="twitter:image"
+            content="http://portfolio-red-eta.vercel.app/images/PortfolioScreenshot.png"
+          />
+
           <meta property="og:title" content="Portfolio Main Page" />
           <meta
             property="og:image"
