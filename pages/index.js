@@ -12,7 +12,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Page = () => {
   return (
-    <Layout title="Página Principal">
+    <Layout title="&#129302; Portfólio">
       <ProgressCircle></ProgressCircle>
       <Box>
         <MotionComponent>
