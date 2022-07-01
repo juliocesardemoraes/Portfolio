@@ -35,7 +35,7 @@ const Experiencia = () => {
             <Heading fontSize={"48px"} fontWeight={"900"}>
               Tech4humans
             </Heading>
-            <Text fontWeight={300}>Fullstack junior developer</Text>
+            <Text fontWeight={300}>Fullstack Developer</Text>
             <Text fontWeight={300}>{t("experiences:experience_time")}</Text>
             <Text mt={"2em"}>{t("experiences:experience_tech")}</Text>
           </Box>
