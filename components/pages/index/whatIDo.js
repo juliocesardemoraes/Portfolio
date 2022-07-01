@@ -60,6 +60,7 @@ const WhatIDo = () => {
               justifyContent={"center"}
             >
               <Image
+                alt={"Programming icon rounded"}
                 src={"/images/ProgrammingRounded.svg"}
                 w={"50%"}
                 h={"50%"}
@@ -83,7 +84,7 @@ const WhatIDo = () => {
               alignItems={"center"}
               justifyContent={"center"}
             >
-              <Image src={"/images/PlayHolder.svg"} w={"50%"} h={"50%"}></Image>
+              <Image src={"/images/PlayHolder.svg"} w={"50%"} h={"50%"} alt={"Hovering play button"}></Image>
               <Box zIndex={3}>
                 <MotionBoxChildren imageName={"PlayButton"}></MotionBoxChildren>
               </Box>
@@ -106,7 +107,7 @@ const WhatIDo = () => {
               alignItems={"center"}
               justifyContent={"center"}
             >
-              <Image src={"/images/UXUI.svg"} w={"50%"} h={"50%"}></Image>
+              <Image src={"/images/UXUI.svg"} w={"50%"} h={"50%"} alt={"UX/UI Icon"}></Image>
               <Box zIndex={3}>
                 <MotionBoxChildren
                   imageName={"FloatingCellPhone"}

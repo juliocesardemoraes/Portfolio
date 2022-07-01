@@ -33,7 +33,7 @@ const THREEDContainer = (props) => {
       const scH = container.clientHeight / props?.resizeValue;
       renderer.setSize(scW, scH);
     }
-  }, [renderer]);
+  }, [renderer, props?.resizeValue]);
 
   const onDocumentMouseMove = (event) => {
     let raycaster = new THREE.Raycaster();

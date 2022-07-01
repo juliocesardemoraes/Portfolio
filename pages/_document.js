@@ -10,10 +10,10 @@ export default class Document extends NextDocument {
         <Head>
           <meta name="description" content="Portfolio land page" />
 
-          <meta itemprop="name" content="Portfolio Main Page" />
-          <meta itemprop="description" content="Portfolio land page" />
+          <meta itemProp="name" content="Portfolio Main Page" />
+          <meta itemProp="description" content="Portfolio land page" />
           <meta
-            itemprop="image"
+            itemProp="image"
             content="http://portfolio-red-eta.vercel.app/images/PortfolioScreenshot.png"
           />
 
