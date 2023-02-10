@@ -1,8 +1,13 @@
 # Portfolio
 
-# What is it
+## What is it
 
-This is my Personal portfolio that was made for testing grounds with threejs library
+This is my Personal portfolio that was made for testing grounds with threejs library. 
+
+Checkout the video below on how it works or check it by yourself in the following link: https://portfolio-red-eta.vercel.app/
+
+https://user-images.githubusercontent.com/42243423/218118656-6c9b8013-dcd2-48ed-a118-dc77c70da8fa.mp4
+
 
 ### TechStack
 
