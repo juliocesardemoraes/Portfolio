@@ -1,1 +1,7 @@
-{"experience_tech":"Node.js, React.js, Jest, Postgres, Typescript and Javascript","experience_time":"April 2021 - Currently.","working_on":"Under development"}
+{
+  "experience_tech": "Node.js, React.js, Jest, Postgres, Typescript and Javascript",
+  "experience_tech_zoop": "Node.js, React.js, Jest, Postgres, Typescript and Javascript, Python, Nestjs, Husky, Cypress, Elastic Search, Aws Services",
+  "experience_time": "April 2021 - December 2022.",
+  "experience_time_zoop": "January 2023 - Currently.",
+  "working_on": "Under development"
+}
