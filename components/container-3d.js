@@ -136,7 +136,6 @@ const THREEDContainer = (props) => {
       };
 
       return () => {
-        console.log("unmount");
         cancelAnimationFrame(req);
         renderer.dispose();
       };
