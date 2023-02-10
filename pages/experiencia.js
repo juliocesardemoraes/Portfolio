@@ -14,6 +14,36 @@ const Experiencia = () => {
         </Heading>
         <SimpleGrid
           columns={[1, 1, 2]}
+          spacing={8}
+          marginTop={"1em"}
+          padding={"2em"}
+        >
+          <THREEDContainer
+            model={"./Zoop"}
+            resizeValue={1}
+            thresholdValue={0}
+            xValue={"100vw"}
+            delay={0.25}
+          ></THREEDContainer>
+          <Box
+            height={"450px"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            display={"flex"}
+            flexDir={"column"}
+          >
+            <Heading fontSize={"48px"} fontWeight={"900"}>
+              Zoop
+            </Heading>
+            <Text fontWeight={300}>Fullstack Developer</Text>
+            <Text fontWeight={300}>
+              {t("experiences:experience_time_zoop")}
+            </Text>
+            <Text mt={"2em"}>{t("experiences:experience_tech_zoop")}</Text>
+          </Box>
+        </SimpleGrid>
+        <SimpleGrid
+          columns={[1, 1, 2]}
           spacing={5}
           marginTop={"1em"}
           padding={"2em"}
